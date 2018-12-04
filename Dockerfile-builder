@@ -1,0 +1,8 @@
+FROM docker:stable
+
+WORKDIR /tmp
+
+RUN apk add curl unzip bash
+COPY ./script.sh .
+
+ENTRYPOINT ["./script.sh"]
